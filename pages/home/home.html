@@ -14,4 +14,20 @@
     <img src="https://cdn.jsdelivr.net/gh/JanieLim/BMI-Calculator@master/APP%20DESIGN.jpeg">
   </p>
   
+<ion-item>
+  <ion-label>Height in meter: </ion-label>
+  <ion-input type="number" [(ngModel)]="height"></ion-input>
+</ion-item>
 
+<ion-item>
+  <ion-label>Weight in kilogram: </ion-label>
+  <ion-input type="number" [(ngModel)]="weight"></ion-input>
+</ion-item>
+
+<button ion-button color="secondary" (click)="calculateBMI()" > 
+  Calculate 
+</button>
+
+<ion-item *ngIf="bmi">
+  <h2>Your BMI is: {{bmi}} <code> ({{bmiMessage}})</code></h2>
+<ion-item>
